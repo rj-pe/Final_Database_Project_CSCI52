@@ -1,0 +1,18 @@
+#fields:
+atomic number_PK INT,
+melting_point DOUBLE ,
+boiling_point DOUBLE ,
+density DOUBLE ,
+molar_volume DOUBLE ,
+brinell_hardness DOUBLE ,
+mohs_hardness DOUBLE ,
+bulk_modulus DOUBLE ,
+shear_modulus DOUBLE ,
+young_modulus DOUBLE ,
+poisson_ratio DOUBLE ,
+refractive_index DOUBLE ,
+speed_of_sound DOUBLE ,
+thermal_conductivity DOUBLE ,
+thermal_expansion DOUBLE
+
+#data:

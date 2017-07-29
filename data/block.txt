@@ -1,0 +1,8 @@
+#fields:
+atomic_number_PK INT ,
+block_ID INT ,
+block_name VARCHAR(45) ,
+category_ID INT ,
+category_name VARCHAR(45) ,
+
+#data:
