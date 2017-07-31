@@ -1,0 +1,6 @@
+#fields:
+atomic_number_PK INT ,
+periodic_table_row_num_PK INT ,
+number_electron_shells INT ,
+
+#data:

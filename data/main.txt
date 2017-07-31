@@ -1,0 +1,8 @@
+#fields:
+atomic_number INT ,
+symbol TEXT ,
+chemical_formula VARCHAR(20) ,
+period INT ,
+group_FK INT ,
+
+#data:

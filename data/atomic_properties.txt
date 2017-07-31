@@ -1,0 +1,14 @@
+#fields:
+atomic_number_PK  ,
+standard_atomic_weight  ,
+electron_configuration  ,
+atomic_radius  ,
+ionization_energy  ,
+electronegativity  ,
+electron_affinity  ,
+crystal_structures  ,
+covalent_radius  ,
+van_der_waals_radius  ,
+electron_configuration_ID_FK  ,
+
+#data:

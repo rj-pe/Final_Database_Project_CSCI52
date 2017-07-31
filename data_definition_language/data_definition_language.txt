@@ -1,0 +1,29 @@
+#physical_properties
+[insert ddl statement here]
+
+#natural_occurrence
+[insert ddl statement here]
+
+#main
+[insert ddl statement here]
+
+#group
+[insert ddl statement here]
+
+#block
+[insert ddl statement here]
+
+#period
+[insert ddl statement here]
+
+#atomic_properties
+[insert ddl statement here]
+
+#categories
+[insert ddl statement here]
+
+#element_category
+[insert ddl statement here]
+
+#electron_configuration
+[insert ddl statement here]

@@ -1,0 +1,7 @@
+#fields:
+category_ID_PK INT ,
+core_charge_PK DOUBLE ,
+category VARCHAR(45) ,
+sub_category VARCHAR(45) ,
+
+#data:

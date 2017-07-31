@@ -1,0 +1,7 @@
+#fields:
+group_number_PK   INT ,
+atomic_number_PK INT ,
+group_name VARCHAR(45) ,
+core_charge DOUBLE ,
+
+#data:
