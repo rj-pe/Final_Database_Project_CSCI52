@@ -1,7 +1,0 @@
-#fields:
-atomic_number_PK INT ,
-electron_configuration_ID_PK INT ,
-electron_configuration VARCHAR(20) ,
-core_charge DOUBLE ,
-
-#data:
