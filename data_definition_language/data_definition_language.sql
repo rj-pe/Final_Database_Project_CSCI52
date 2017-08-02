@@ -1,5 +1,7 @@
+-- create a schema so that we can apply data_contol_language statements globally
+CREATE SCHEMA periodic ;
 -- create table: physical_properties
-CREATE TABLE physical_properties (
+CREATE TABLE periodic.physical_properties (
     atomic_number_PK INTEGER PRIMARY KEY,
     melting_point NUMERIC ,
     boiling_point NUMERIC ,
@@ -32,7 +34,7 @@ CREATE TABLE physical_properties (
 [insert ddl statement here]
 
 -- create table: electron_configuration
-CREATE TABLE electron_configuration (
+CREATE TABLE periodic.electron_configuration (
   id SERIAL PRIMARY KEY ,
   electron_configuration TEXT ) ;
   /*
@@ -43,13 +45,13 @@ CREATE TABLE electron_configuration (
 ALTER SEQUENCE electron_configuration_id_seq RESTART WITH 1001 ;
 
 -- create table: elec_config_mapping
-CREATE TABLE elec_config_mapping (
+CREATE TABLE periodic.elec_config_mapping (
   atomic_number_PK INTEGER ,
   electron_configuration_id_FK INT REFERENCES electron_configuration ( id ) ,
   core_charge  /* not sure about the data type for this field */ ) ;
 
 -- create table: atomic_properties
-CREATE TABLE atomic_properties (
+CREATE TABLE periodic.atomic_properties (
   atomic_number_PK INTEGER PRIMARY KEY ,
   standard_atomic_weight NUMERIC ,
   electron_configuration TEXT ,
