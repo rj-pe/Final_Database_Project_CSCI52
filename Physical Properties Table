@@ -1,0 +1,136 @@
+create table physical_properties(
+        atomic_number int primary key,
+        phase varchar(15),
+        melting_point varchar(15),
+        boiling_point varchar(15),
+        density varchar(15),
+        molar_volume varchar(20),
+        brinell_hardness varchar(15),
+        mohs_hardness varchar(15),
+        bulk_modulus varchar(15),
+        shear_modulus varchar(15),
+        young_modulus varchar(15),
+        poisson_ratio decimal(4, 4),
+        refractive_index decimal(10, 8),
+        speed_of_sound varchar(15),
+        thermal_conductivity varchar(20),
+        thermal_expansion varchar(20)
+);
+insert into physical_properties values(1, 'Gas', '-259.14^C', '-252.87 °C', '0.0899 g/l', '0.01121', 'NULL', 'ls', 'NULL', 'NULL', 'NULL', (NULL), 1.000132, '1270.m/s', '0.1805W/(m K)', 'NULL');
+insert into physical_properties values(2, 'Gas', 'NULL', '-268.93 °C', '0.1785 g/l', '0.022424', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), 1.000035, '970.m/s', '0.1513W/(m K)', 'NULL');
+insert into physical_properties values(3, 'Solid', '180.54°C', '1342 °C', '0.535 g/cm3', '0.00001297', 'NULL', '0.6MPa', '11 GPa', '4.2GPa', '4.9GPa', (NULL), (NULL), '6.×103m/s', '85.W/(m K)', '0.000046K-1');
+insert into physical_properties values(4, 'Solid', '1287.°C', '2470 °C', '1.848 g/cm3', '4.8767×10-6', '600 MPa', '5.5MPa', '130 GPa', '132.GPa', '287.GPa', 0.032, (NULL), '1.3×104m/s', '190.W/(m K)', '0.0000113K-1');
+insert into physical_properties values(5, 'Solid', '2075.°C', '4000 °C', '2.46 g/cm3', '4.3947×10-6', 'NULL', '9.3MPa', '320 GPa', 'NULL', 'NULL', (NULL), (NULL), '1.62×104m/s', '27.W/(m K)', '6.×10-6K-1');
+insert into physical_properties values(6, 'Solid', '3550.°C', '4027 °C', '2.26 g/cm3', '5.3145×10-6', 'NULL', '0.5MPa[note]', '33 GPa', 'NULL', 'NULL', (NULL), 2.417, '18350.m/s', '140.W/(m K)', '7.1×10-6K-1');
+insert into physical_properties values(7, 'Gas', '-210.1°C', '-195.79 °C', '1.251 g/l', '0.011196', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), 1.000298, '333.6m/s', '0.02583W/(m K)', 'NULL');
+insert into physical_properties values(8, 'Gas', '-218.3°C', '-182.9 °C', '1.429 g/l', '0.011196', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), 1.000271, '317.5m/s', '0.02658W/(m K)', 'NULL');
+insert into physical_properties values(9, 'Gas', '-219.6°C', '-188.12 °C', '1.696 g/l', '0.011202', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), 1.000195, 'NULL', '0.0277W/(m K)', 'NULL');
+insert into physical_properties values(10, 'Gas', '-248.59°C', '-246.08 °C', '0.9 g/l', '0.02242', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), 1.000067, '936.m/s', '0.0491W/(m K)', 'NULL');
+insert into physical_properties values(11, 'Solid', '97.72°C', '883 °C', '0.968 g/cm3', '0.00002375', '0.69 MPa', '0.5MPa', '6.3 GPa', '3.3GPa', '10.GPa', (NULL), (NULL), '3.2×103m/s', '140.W/(m K)', '0.000071K-1');
+insert into physical_properties values(12, 'Solid', '650.°C', '1090 °C', '1.738 g/cm3', '0.000013984', '260 MPa', '2.5MPa', '45 GPa', '17.GPa', '45.GPa', 0.29, (NULL), '4602.m/s', '160.W/(m K)', '8.2×10-6K-1');
+insert into physical_properties values(13, 'Solid', '660.32°C', '2519 °C', '2.7 g/cm3', '9.99×10-6', '245 MPa', '2.75MPa', '76 GPa', '26.GPa', '70.GPa', 0.35, (NULL), '5.1×103m/s', '235.W/(m K)', '0.0000231K-1');
+insert into physical_properties values(14, 'Solid', '1414.°C', '2.9×103 °C', '2.33 g/cm3', '0.000012054', 'NULL', '6.5MPa', '100 GPa', 'NULL', '47.GPa', (NULL), (NULL), '2.2×103m/s', '150.W/(m K)', '2.6×10-6K-1');
+insert into physical_properties values(15, 'Solid', '44.2°C', '280.5 °C', '1.823 g/cm3', '0.000016991', 'NULL', 'NULL', '11 GPa', 'NULL', 'NULL', (NULL), 1.001212, 'NULL', '0.236W/(m K)', 'NULL');
+insert into physical_properties values(16, 'Solid', '115.21°C', '444.72 °C', '1.96 g/cm3', '0.00001636', 'NULL', '2.MPa', '7.7 GPa', 'NULL', 'NULL', (NULL), 1.001111, 'NULL', '0.205W/(m K)', 'NULL');
+insert into physical_properties values(17, 'Gas', '-101.5°C', '-34.04 °C', '3.214 g/l', '0.011031', 'NULL', 'NULL', '1.1 GPa', 'NULL', 'NULL', (NULL), 1.000773, '206.m/s', '0.0089W/(m K)', 'NULL');
+insert into physical_properties values(18, 'Gas', '-189.3°C', '-185.8 °C', '1.784 g/l', '0.022392', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), 1.000281, '319.m/s', '0.01772W/(m K)', 'NULL');
+insert into physical_properties values(19, 'Solid', '63.38°C', '759 °C', '0.856 g/cm3', '0.00004568', '0.363 MPa', '0.4MPa', '3.1 GPa', '1.3GPa', 'NULL', (NULL), (NULL), '2.×103m/s', '100.W/(m K)', 'NULL');
+insert into physical_properties values(20, 'Solid', '842.°C', '1484 °C', '1.55 g/cm3', '0.000025857', '167 MPa', '1.75MPa', '17 GPa', '7.4GPa', '20.GPa', 0.31, (NULL), '3810.m/s', '200.W/(m K)', '0.0000223K-1');
+insert into physical_properties values(21, 'Solid', '1541.°C', '2830 °C', '2.985 g/cm3', '0.000015061', '750 MPa', 'NULL', '57 GPa', '29.GPa', '74.GPa', 0.28, (NULL), 'NULL', '16.W/(m K)', '0.0000102K-1');
+insert into physical_properties values(22, 'Solid', '1668.°C', '3287 °C', '4.507 g/cm3', '0.000010621', '716 MPa', '6.MPa', '110 GPa', '44.GPa', '116.GPa', 0.32, (NULL), '4140.m/s', '22.W/(m K)', '8.6×10-6K-1');
+insert into physical_properties values(23, 'Solid', '1910.°C', '3407 °C', '6.11 g/cm3', '8.3374×10-6', '628 MPa', '7.MPa', '160 GPa', '47.GPa', '128.GPa', 0.37, (NULL), '4560.m/s', '31.W/(m K)', '8.4×10-6K-1');
+insert into physical_properties values(24, 'Solid', '1907.°C', '2671 °C', '7.14 g/cm3', '7.2824×10-6', '1120 MPa', '8.5MPa', '160 GPa', '115.GPa', '279.GPa', 0.21, (NULL), '5940.m/s', '94.W/(m K)', '4.9×10-6K-1');
+insert into physical_properties values(25, 'Solid', '1246.°C', '2061 °C', '7.47 g/cm3', '7.3545×10-6', '196 MPa', '6.MPa', '120 GPa', 'NULL', '198.GPa', (NULL), (NULL), '5150.m/s', '7.8W/(m K)', '0.0000217K-1');
+insert into physical_properties values(26, 'Solid', '1538.°C', '2861 °C', '7.874 g/cm3', '7.0923×10-6', '490 MPa', '4.MPa', '170 GPa', '82.GPa', '211.GPa', 0.29, (NULL), '4910.m/s', '80.W/(m K)', '0.0000118K-1');
+insert into physical_properties values(27, 'Solid', '1495.°C', '2927 °C', '8.9 g/cm3', '6.62×10-6', '700 MPa', '5.MPa', '180 GPa', '75.GPa', '209.GPa', 0.31, (NULL), '4720.m/s', '100.W/(m K)', '0.000013K-1');
+insert into physical_properties values(28, 'Solid', '1455.°C', '2913 °C', '8.908 g/cm3', '6.5888×10-6', '700 MPa', '4.MPa', '180 GPa', '76.GPa', '200.GPa', 0.31, (NULL), '4970.m/s', '91.W/(m K)', '0.0000134K-1');
+insert into physical_properties values(29, 'Solid', '1084.62°C', '2927 °C', '8.92 g/cm3', '7.124×10-6', '874 MPa', '3.MPa', '140 GPa', '48.GPa', '130.GPa', 0.34, (NULL), '3570.m/s', '400.W/(m K)', '0.0000165K-1');
+insert into physical_properties values(30, 'Solid', '419.53°C', '907 °C', '7.14 g/cm3', '9.161×10-6', '412 MPa', '2.5MPa', '70 GPa', '43.GPa', '108.GPa', 0.25, 1.00205, '3.7×103m/s', '120.W/(m K)', '0.0000302K-1');
+insert into physical_properties values(31, 'Solid', '29.76°C', '2204 °C', '5.904 g/cm3', '0.000011809', '60 MPa', '1.5MPa', 'NULL', 'NULL', 'NULL', (NULL), (NULL), '2740.m/s', '29.W/(m K)', '0.00012K-1');
+insert into physical_properties values(32, 'Solid', '938.3°C', '2820 °C', '5.323 g/cm3', '0.000013646', 'NULL', '6.MPa', 'NULL', 'NULL', 'NULL', (NULL), (NULL), '5.4×103m/s', '60.W/(m K)', '6.×10-6K-1');
+insert into physical_properties values(33, 'Solid', '817.°C', '614 °C', '5.727 g/cm3', '0.000013082', '1440 MPa', '3.5MPa', '22 GPa', 'NULL', '8.GPa', (NULL), 1.001552, 'NULL', '50.W/(m K)', 'NULL');
+insert into physical_properties values(34, 'Solid', '221.°C', '685 °C', '4.819 g/cm3', '0.000016385', '736 MPa', '2.MPa', '8.3 GPa', '3.7GPa', '10.GPa', 0.33, 1.000895, '3350.m/s', '0.52W/(m K)', 'NULL');
+insert into physical_properties values(35, 'Liquid', '-7.3°C', '59 °C', '3.12 g/cm3', '0.00002561', 'NULL', 'NULL', '1.9 GPa', 'NULL', 'NULL', (NULL), 1.001132, 'NULL', '0.12W/(m K)', 'NULL');
+insert into physical_properties values(36, 'Gas', '-157.36°C', '-153.22 °C', '3.75 g/l', '0.02235', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), 1.000427, '1120.m/s', '0.00943W/(m K)', 'NULL');
+insert into physical_properties values(37, 'Solid', '39.31°C', '688 °C', '1.532 g/cm3', '0.000055788', '0.216 MPa', '0.3MPa', '2.5 GPa', 'NULL', '2.4GPa', (NULL), (NULL), '1.3×103m/s', '58.W/(m K)', 'NULL');
+insert into physical_properties values(38, 'Solid', '777.°C', '1382 °C', '2.63 g/cm3', '0.000033316', 'NULL', '1.5MPa', 'NULL', '6.1GPa', 'NULL', 0.28, (NULL), 'NULL', '35.W/(m K)', '0.0000225K-1');
+insert into physical_properties values(39, 'Solid', '1526.°C', '3345 °C', '4.472 g/cm3', '0.000019881', '589 MPa', 'NULL', '41 GPa', '26.GPa', '64.GPa', 0.24, (NULL), '3.3×103m/s', '17.W/(m K)', '0.0000106K-1');
+insert into physical_properties values(40, 'Solid', '1855.°C', '4409 °C', '6.511 g/cm3', '0.000014011', '650 MPa', '5.MPa', 'NULL', '33.GPa', '68.GPa', 0.34, (NULL), '3.8×103m/s', '23.W/(m K)', '5.7×10-6K-1');
+insert into physical_properties values(41, 'Solid', '2477.°C', '4744 °C', '8.57 g/cm3', '0.000010841', '736 MPa', '6.MPa', '170 GPa', '38.GPa', '105.GPa', 0.4, (NULL), '3480.m/s', '54.W/(m K)', '7.3×10-6K-1');
+insert into physical_properties values(42, 'Solid', '2623.°C', '4639 °C', '10.28 g/cm3', '9.333×10-6', '1.5×103 MPa', '5.5MPa', '230 GPa', '20.GPa', '329.GPa', 0.31, (NULL), '6190.m/s', '139.W/(m K)', '4.8×10-6K-1');
+insert into physical_properties values(43, 'Solid', '2157.°C', '4265 °C', '11.5 g/cm3', '8.522×10-6', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '51.W/(m K)', 'NULL');
+insert into physical_properties values(44, 'Solid', '2334.°C', '4150 °C', '12.37 g/cm3', '8.1706×10-6', '2160 MPa', '6.5MPa', '220 GPa', '173.GPa', '447.GPa', 0.3, (NULL), '5970.m/s', '120.W/(m K)', '6.4×10-6K-1');
+insert into physical_properties values(45, 'Solid', '1964.°C', '3695 °C', '12.45 g/cm3', '8.2655×10-6', '1.1×103 MPa', '6.MPa', '380 GPa', '150.GPa', '275.GPa', 0.26, (NULL), '4.7×103m/s', '150.W/(m K)', '8.2×10-6K-1');
+insert into physical_properties values(46, 'Solid', '1554.9°C', '2963 °C', '12.023 g/cm3', '8.8514×10-6', '37.3 MPa', '4.75MPa', '180 GPa', '44.GPa', '121.GPa', 0.39, (NULL), '3070.m/s', '72.W/(m K)', '0.0000118K-1');
+insert into physical_properties values(47, 'Solid', '961.78°C', '2162 °C', '10.49 g/cm3', '0.000010283', '24.5 MPa', '2.5MPa', '100 GPa', '30.GPa', '83.GPa', 0.37, (NULL), '2.6×103m/s', '430.W/(m K)', '0.0000189K-1');
+insert into physical_properties values(48, 'Solid', '321.07°C', '767 °C', '8.65 g/cm3', '0.000012995', '203 MPa', '2.MPa', '42 GPa', '19.GPa', '50.GPa', 0.3, (NULL), '2310.m/s', '97.W/(m K)', '0.0000308K-1');
+insert into physical_properties values(49, 'Solid', '156.6°C', '2072 °C', '7.31 g/cm3', '0.000015707', '8.83 MPa', '1.2MPa', 'NULL', 'NULL', '11.GPa', (NULL), (NULL), '1215.m/s', '82.W/(m K)', '0.0000321K-1');
+insert into physical_properties values(50, 'Solid', '231.93°C', '2602 °C', '7.31 g/cm3', '0.000016239', '51 MPa', '1.5MPa', '58 GPa', '18.GPa', '50.GPa', 0.36, (NULL), '2.5×103m/s', '67.W/(m K)', '0.000022K-1');
+insert into physical_properties values(51, 'Solid', '630.63°C', '1587 °C', '6.697 g/cm3', '0.000018181', '294 MPa', '3.MPa', '42 GPa', '20.GPa', '55.GPa', (NULL), (NULL), '3420.m/s', '24.W/(m K)', '0.000011K-1');
+insert into physical_properties values(52, 'Solid', '449.51°C', '988 °C', '6.24 g/cm3', '0.000020449', '180 MPa', '2.25MPa', '65 GPa', '16.GPa', '43.GPa', (NULL), 1.000991, '2610.m/s', '3.W/(m K)', 'NULL');
+insert into physical_properties values(53, 'Solid', '113.7°C', '184.3 °C', '4.94 g/cm3', '0.000025689', 'NULL', 'NULL', '7.7 GPa', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '0.449W/(m K)', 'NULL');
+insert into physical_properties values(54, 'Gas', '-111.8°C', '-108 °C', '5.9 g/l[note]', '0.0223', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), 1.000702, '1090.m/s', '0.00565W/(m K)', 'NULL');
+insert into physical_properties values(55, 'Solid', '28.44°C', '671 °C', '1.879 g/cm3', '0.000070732', '0.14 MPa', '0.2MPa', '1.6 GPa', 'NULL', '1.7GPa', (NULL), (NULL), 'NULL', '36.W/(m K)', 'NULL');
+insert into physical_properties values(56, 'Solid', '727.°C', '1870 °C', '3.51 g/cm3', '0.000039125', 'NULL', '1.25MPa', '9.6 GPa', '4.9GPa', '13.GPa', (NULL), (NULL), '1620.m/s', '18.W/(m K)', '0.0000206K-1');
+insert into physical_properties values(57, 'Solid', '920.°C', '3464 °C', '6.146 g/cm3', '0.000022601', '363 MPa', '2.5MPa', '28 GPa', '14.GPa', '37.GPa', 0.28, (NULL), '2475.m/s', '13.W/(m K)', '0.0000121K-1');
+insert into physical_properties values(58, 'Solid', '798.°C', '3360 °C', '6.689 g/cm3', '0.000020947', '412 MPa', '2.5MPa', '22 GPa', '14.GPa', '34.GPa', 0.24, (NULL), '2.1×103m/s', '11.W/(m K)', '6.3×10-6K-1');
+insert into physical_properties values(59, 'Solid', '931.°C', '3290 °C', '6.64 g/cm3', '0.000021221', '481 MPa', 'NULL', '29 GPa', '15.GPa', '37.GPa', 0.28, (NULL), '2280.m/s', '13.W/(m K)', '6.7×10-6K-1');
+insert into physical_properties values(60, 'Solid', '1021.°C', '3.1×103 °C', '7.01 g/cm3', '0.000020576', '265 MPa', 'NULL', '32 GPa', '16.GPa', '41.GPa', 0.28, (NULL), '2330.m/s', '17.W/(m K)', '9.6×10-6K-1');
+insert into physical_properties values(61, 'Solid', '1.1×103°C', '3×103 °C', '7.264 g/cm3', '0.000019961', 'NULL', 'NULL', '33 GPa', '18.GPa', '46.GPa', 0.28, (NULL), 'NULL', '15.W/(m K)', '0.000011K-1');
+insert into physical_properties values(62, 'Solid', '1072.°C', '1803 °C', '7.353 g/cm3', '0.000020449', '441 MPa', 'NULL', '38 GPa', '20.GPa', '50.GPa', 0.27, (NULL), '2130.m/s', '13.W/(m K)', '0.0000127K-1');
+insert into physical_properties values(63, 'Solid', '822.°C', '1527 °C', '5.244 g/cm3', '0.000028979', 'NULL', 'NULL', '8.3 GPa', '7.9GPa', '18.GPa', 0.15, (NULL), 'NULL', '14.W/(m K)', '0.000035K-1');
+insert into physical_properties values(64, 'Solid', '1313.°C', '3250 °C', '7.901 g/cm3', '0.000019903', 'NULL', 'NULL', '38 GPa', '22.GPa', '55.GPa', 0.26, (NULL), '2680.m/s', '11.W/(m K)', '9.4×10-6K-1');
+insert into physical_properties values(65, 'Solid', '1356.°C', '3230 °C', '8.219 g/cm3', '0.000019336', '677 MPa', 'NULL', '38.7 GPa', '22.GPa', '56.GPa', 0.26, (NULL), '2620.m/s', '11.W/(m K)', '0.0000103K-1');
+insert into physical_properties values(66, 'Solid', '1412.°C', '2567 °C', '8.551 g/cm3', '0.000019004', '500 MPa', 'NULL', '41 GPa', '25.GPa', '61.GPa', 0.25, (NULL), '2710.m/s', '11.W/(m K)', '9.9×10-6K-1');
+insert into physical_properties values(67, 'Solid', '1474.°C', '2700 °C', '8.795 g/cm3', '0.000018753', '746 MPa', 'NULL', '40 GPa', '26.GPa', '65.GPa', 0.23, (NULL), '2760.m/s', '16.W/(m K)', '0.0000112K-1');
+insert into physical_properties values(68, 'Solid', '1497.°C', '2868 °C', '9.066 g/cm3', '0.000018449', '814 MPa', 'NULL', '44 GPa', '28.GPa', '70.GPa', 0.24, (NULL), '2830.m/s', '15.W/(m K)', '0.0000122K-1');
+insert into physical_properties values(69, 'Solid', '1545.°C', '1950 °C', '9.321 g/cm3', '0.000018124', '471 MPa', 'NULL', '45 GPa', '31.GPa', '74.GPa', 0.21, (NULL), 'NULL', '17.W/(m K)', '0.0000133K-1');
+insert into physical_properties values(70, 'Solid', '819.°C', '1196 °C', '6.57 g/cm3', '0.000026338', '343 MPa', 'NULL', '31 GPa', '9.9GPa', '24.GPa', 0.21, (NULL), '1590.m/s', '39.W/(m K)', '0.0000263K-1');
+insert into physical_properties values(71, 'Solid', '1663.°C', '3402 °C', '9.841 g/cm3', '0.000017779', '893 MPa', 'NULL', '48 GPa', '27.GPa', '69.GPa', 0.26, (NULL), 'NULL', '16.W/(m K)', '9.9×10-6K-1');
+insert into physical_properties values(72, 'Solid', '2233.°C', '4603 °C', '13.31 g/cm3', '1.34E-05', '1.7×103 MPa', '5.5MPa', '110 GPa', '30.GPa', '78.GPa', 0.37, (NULL), '3010.m/s', '23.W/(m K)', '5.9×10-6K-1');
+insert into physical_properties values(73, 'Solid', '3017.°C', '5458 °C', '16.65 g/cm3', '1.09E-05', '800 MPa', '6.5MPa', '200 GPa', '69.GPa', '186.GPa', 0.34, (NULL), '3.4×103m/s', '57.W/(m K)', '6.3×10-6K-1');
+insert into physical_properties values(74, 'Solid', '3422.°C', '5555 °C', '19.25 g/cm3', '9.5501×10-6', '2570 MPa', '7.5MPa', '310 GPa', '161.GPa', '411.GPa', 0.28, (NULL), '5174.m/s', '170.W/(m K)', '4.5×10-6K-1');
+insert into physical_properties values(75, 'Solid', '3186.°C', '5596 °C', '21.02 g/cm3', '8.85856×10-6', '1320 MPa', '7.MPa', '370 GPa', '178.GPa', '463.GPa', 0.3, (NULL), '4.7×103m/s', '48.W/(m K)', '6.2×10-6K-1');
+insert into physical_properties values(76, 'Solid', '3033.°C', '5012 °C', '22.61 g/cm3', '8.4135×10-6', '3920 MPa', '7.MPa', 'NULL', '222.GPa', 'NULL', 0.25, (NULL), '4940.m/s', '88.W/(m K)', '5.1×10-6K-1');
+insert into physical_properties values(77, 'Solid', '2466.°C', '4428 °C', '22.65 g/cm3', '8.4864×10-6', '1670 MPa', '6.5MPa', '320 GPa', '210.GPa', '528.GPa', 0.26, (NULL), '4825.m/s', '150.W/(m K)', '6.4×10-6K-1');
+insert into physical_properties values(78, 'Solid', '1768.3°C', '3825 °C', '21.09 g/cm3', '9.2498×10-6', '392 MPa', '3.5MPa', '230 GPa', '61.GPa', '168.GPa', 0.38, (NULL), '2680.m/s', '72.W/(m K)', '8.8×10-6K-1');
+insert into physical_properties values(79, 'Solid', '1064.18°C', '2856 °C', '19.3 g/cm3', '0.00001021', '2450 MPa', '2.5MPa', '220 GPa', '27.GPa', '78.GPa', 0.44, (NULL), '1740.m/s', '320.W/(m K)', '0.0000142K-1');
+insert into physical_properties values(80, 'Liquid', '-38.83°C', '356.73 °C', '13.534 g/cm3', '1.48E-05', 'NULL', 'NULL', '25 GPa', 'NULL', 'NULL', (NULL), 1.000933, '1407.m/s', '8.3W/(m K)', 'NULL');
+insert into physical_properties values(81, 'Solid', '304.°C', '1473 °C', '11.85 g/cm3', '1.72E-05', '26.4 MPa', '1.2MPa', '43 GPa', '2.8GPa', '8.GPa', 0.45, (NULL), '818.m/s', '46.W/(m K)', '0.0000299K-1');
+insert into physical_properties values(82, 'Solid', '327.46°C', '1749 °C', '11.34 g/cm3', '0.000018272', '38.3 MPa', '1.5MPa', '46 GPa', '5.6GPa', '16.GPa', 0.44, (NULL), '1260.m/s', '35.W/(m K)', '0.0000289K-1');
+insert into physical_properties values(83, 'Solid', '271.3°C', '1564 °C', '9.78 g/cm3', '0.000021368', '94.2 MPa', '2.25MPa', '31 GPa', '12.GPa', '32.GPa', 0.33, (NULL), '1790.m/s', '8.W/(m K)', '0.0000134K-1');
+insert into physical_properties values(84, 'Solid', '254.°C', '962 °C', '9.196 g/cm3', '0.000022727', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(85, 'Solid', '302.°C', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '2.W/(m K)', 'NULL');
+insert into physical_properties values(86, 'Gas', '-71.°C', '-61.7 °C', '9.73 g/l', '0.02282', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '0.00361W/(m K)', 'NULL');
+insert into physical_properties values(87, 'Solid', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(88, 'Solid', '700.°C', '1737 °C', '5 g/cm3', '0.0000452', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '19.W/(m K)', 'NULL');
+insert into physical_properties values(89, 'Solid', '1050.°C', '3200 °C', '10.07 g/cm3', '2.25E-05', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '12.W/(m K)', 'NULL');
+insert into physical_properties values(90, 'Solid', '1750.°C', '4820 °C', '11.724 g/cm3', '1.98E-05', '400 MPa', '3.MPa', '54 GPa', '31.GPa', '79.GPa', 0.27, (NULL), '2490.m/s', '54.W/(m K)', '0.000011K-1');
+insert into physical_properties values(91, 'Solid', '1572.°C', '4000 °C', '15.37 g/cm3', '1.50E-05', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '47.W/(m K)', 'NULL');
+insert into physical_properties values(92, 'Solid', '1135.°C', '3927 °C', '19.05 g/cm3', '0.000012495', '2.4×103 MPa', '6.MPa', '100 GPa', '111.GPa', '208.GPa', 0.23, (NULL), '3155.m/s', '27.W/(m K)', '0.0000139K-1');
+insert into physical_properties values(93, 'Solid', '644.°C', '4×103 °C', '20.45 g/cm3', '1.16E-05', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '6.W/(m K)', 'NULL');
+insert into physical_properties values(94, 'Solid', '640.°C', '3230 °C', '19.816 g/cm3', '1.23E-05', 'NULL', 'NULL', 'NULL', '43.GPa', '96.GPa', 0.21, (NULL), '2260.m/s', '6.W/(m K)', 'NULL');
+insert into physical_properties values(95, 'Solid', '1176.°C', '2011 °C', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '10.W/(m K)', 'NULL');
+insert into physical_properties values(96, 'Solid', '1345.°C', '3110 °C', '13.51 g/cm3', '1.83E-05', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(97, 'Solid', '1050.°C', 'NULL', '14.78 g/cm3', '1.67E-05', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', '10.W/(m K)', 'NULL');
+insert into physical_properties values(98, 'Solid', '900.°C', 'NULL', '15.1 g/cm3', '0.00001662', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(99, 'Solid', '860.°C', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(100, 'NULL', '1527.°C', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(101, 'NULL', '827.°C', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(102, 'NULL', '827.°C', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(103, 'NULL', '1627.°C', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(104, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(105, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(106, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(107, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(108, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(109, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(110, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(111, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(112, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(113, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(114, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(115, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(116, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(117, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
+insert into physical_properties values(118, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', (NULL), (NULL), 'NULL', 'NULL', 'NULL');
