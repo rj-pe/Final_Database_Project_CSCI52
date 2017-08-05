@@ -29,6 +29,21 @@ each of the **large subheadings** represents a directory container for `SQL code
   
   Database entities definition including attributes of the objects, data types, and constraints/restrictions on the attributes (15 points)
 
+#### tables that need building:
+table name ,  person responsible for data
+
+block , RJ
+
+categories , RJ 
+
+element_category , RJ
+
+group
+
+natural occurence
+
+period
+
 
 ## data_control_language
 
