@@ -4,6 +4,15 @@ Periodic Table of Elements Repository
 each of the **large subheadings** represents a directory container for `SQL code`  
 ***
 
+## general tasks
+  ##### compiling final sql db creation script (RJ-- in progress) 
+  ##### testing the final sql db creation script (RJ-- in progress) 
+  ##### intro statement
+  ##### data normalization page (RJ-- in progress) 
+  ##### description of each of the components in the script 
+  ##### put final files together
+  ##### write readme with instructions for professor
+  ##### submit project  
 
 ## project_design
 
