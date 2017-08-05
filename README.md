@@ -61,13 +61,13 @@ period
 ## data_control_language (this section complete RJ)
 
 #### description:
-  we should write some statements to create user roles to grant / restrict privileges.
+  we should write some statements to create user roles to grant / restrict privileges. RJ
   
 #### contains:
-  data_control_language.sql
+  data_control_language.sql RJ
   
 #### requirements to fulfill:
-  Database security and administration to the extent covered in chapter 6 (5 points)
+  Database security and administration to the extent covered in chapter 6 (5 points) RJ
 
 
 ## data_manipulation_language
