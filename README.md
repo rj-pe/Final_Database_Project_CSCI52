@@ -29,7 +29,7 @@ each of the **large subheadings** represents a directory container for `SQL code
   
   Database entities definition including attributes of the objects, data types, and constraints/restrictions on the attributes (15 points)
 
-#### tables that need building:
+#### completed tables (data and ddl):
 table name ,  person responsible for data
 
 block , RJ
@@ -38,6 +38,19 @@ categories , RJ
 
 element_category , RJ
 
+main , MZ
+
+elec_config_mapping, RJ
+
+physical_properties, RJ MZ
+
+atomic_properties, RJ MZ
+
+electron_configuration, RJ
+
+#### tables that need building:
+table name ,  person responsible for data
+
 group
 
 natural occurence
@@ -45,7 +58,7 @@ natural occurence
 period
 
 
-## data_control_language
+## data_control_language (this section complete RJ)
 
 #### description:
   we should write some statements to create user roles to grant / restrict privileges.
