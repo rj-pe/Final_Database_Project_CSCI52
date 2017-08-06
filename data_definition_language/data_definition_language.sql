@@ -37,14 +37,23 @@ CREATE TABLE periodic.physical_properties (
     speed_of_sound NUMERIC ,
     thermal_conductivity NUMERIC ,
     thermal_expansion NUMERIC ) ;
+
 --insert data physical_properties
 /*INSERT INTO periodic.physical_properties VALUES
 values ommitted for the sake of clarity in evaluation of ddl
 */
+
 --**--
 --create table: natural_occurrence
---[insert ddl statement here]
+CREATE TABLE periodic.natural_occurrence (
+  atomic_number_PK INTEGER PRIMARY KEY,
+  natural_occurence_name TEXT,
+  natural_occurence_id INTEGER);
+
 --insert data: natural_occurrence
+/* INSERT INTO periodic.natural_occurrence VALUES
+values ommitted for the sake of clarity in evaluation of ddl
+*/
 
 --**--
 --create table: main
@@ -54,6 +63,7 @@ CREATE TABLE periodic.main (
   symbol VARCHAR(3),
   period_row INTEGER,
   group_column_FK INTEGER ) ;
+
 --insert data: main
 /* INSERT INTO periodic.main VALUES
 values ommitted for the sake of clarity in evaluation of ddl
@@ -72,9 +82,11 @@ CREATE TABLE periodic.period(
   periodic_table_row_num_PK INT ,
   number_electron_shells INT,
   PRIMARY KEY( atomic_number_PK, periodic_table_row_num_PK ) ) ;
-  --insert data: period
-  INSERT INTO periodic.period VALUES
 
+  --insert data: period
+  /* INSERT INTO periodic.period VALUES
+  values ommitted for the sake of clarity in evaluation of ddl
+  */
 
 --**--
 --create table: electron_configuration
@@ -82,6 +94,7 @@ CREATE TABLE periodic.electron_configuration (
   id SERIAL PRIMARY KEY ,
   electron_configuration TEXT ) ;
 ALTER SEQUENCE periodic.electron_configuration_id_seq RESTART WITH 1001 ;
+
 --insert data: electron_configuration
 /* INSERT INTO periodic.electron_configuration(electron_configuration) VALUES
 values ommitted for the sake of clarity in evaluation of ddl
@@ -93,6 +106,7 @@ CREATE TABLE periodic.elec_config_mapping (
   atomic_number_PK INTEGER PRIMARY KEY,
   electron_configuration_id_FK INTEGER
     REFERENCES periodic.electron_configuration ( id ) ) ;
+
 --insert data: elec_config_mapping
 /* INSERT INTO periodic.elec_config_mapping VALUES
 values ommitted for the sake of clarity in evaluation of ddl
@@ -113,6 +127,7 @@ CREATE TABLE periodic.atomic_properties (
   van_der_waals_radius NUMERIC ,
   electron_configuration_id_FK INTEGER
     REFERENCES periodic.electron_configuration ( id ) ) ;
+
 --insert data: atomic_properties
 /* INSERT INTO periodic.atomic_properties VALUES
 values ommitted for the sake of clarity in evaluation of ddl
@@ -123,6 +138,7 @@ values ommitted for the sake of clarity in evaluation of ddl
 CREATE TABLE periodic.categories (
   category TEXT ,
   category_id_PK INTEGER PRIMARY KEY ) ;
+
 --insert data: categories
 /* INSERT INTO periodic.categories VALUES
 values omitted for the sake of clarity and evaluation
@@ -135,6 +151,7 @@ CREATE TABLE periodic.element_category (
   category TEXT,
   category_id_FK INTEGER
     REFERENCES periodic.categories( category_id_PK ) );
+
 --insert data: element_category
 /* INSERT INTO periodic.element_category VALUES
 values ommitted for the sake of clarity in evaluation of ddl
