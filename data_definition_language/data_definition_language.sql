@@ -1,3 +1,18 @@
+-- drop all previous instances of the db tables and views
+DROP TABLE physical_properties CASCADE ;
+DROP TABLE natural_occurrence CASCADE ;
+DROP TABLE main CASCADE ;
+DROP TABLE element_group CASCADE ;
+DROP TABLE period CASCADE ;
+DROP TABLE electron_configuration CASCADE ;
+DROP TABLE elec_config_mapping CASCADE ;
+DROP TABLE atomic_properties CASCADE ;
+DROP TABLE categories CASCADE ;
+DROP TABLE element_category CASCADE ;
+DROP TABLE block CASCADE ;
+DROP SEQUENCE electron_configuration_id_seq CASCADE ;
+/* PLEASE ADD TO THIS SECTION A DROP STATEMENT FOR NEW VIEWS  */
+
 -- create a schema so that we can apply data_contol_language statements globally
 CREATE SCHEMA periodic ;
 -- create table: physical_properties
@@ -22,12 +37,14 @@ CREATE TABLE periodic.physical_properties (
 [insert ddl statement here]
 
 -- create table: main
-[insert ddl statement here]
+CREATE TABLE periodic.main (
+  atomic_number_PK INTEGER PRIMARY KEY,
+  element_name VARCHAR(20),
+  Symbol VARCHAR(3),
+  period_row INTEGER,
+  group_column_FK INTEGER ) ;
 
--- create table: group
-[insert ddl statement here]
-
--- create table: block
+-- create table: element_group
 [insert ddl statement here]
 
 -- create table: period
@@ -37,18 +54,14 @@ CREATE TABLE periodic.physical_properties (
 CREATE TABLE periodic.electron_configuration (
   id SERIAL PRIMARY KEY ,
   electron_configuration TEXT ) ;
-  /*
-  rather than include the atomic_number and core_charge fields in this table
-  I thought it might be better to create a separate table (elec_config_mapping)
-  to map the relationship between atomic_number and electron_configuration_id .
-  */
 ALTER SEQUENCE electron_configuration_id_seq RESTART WITH 1001 ;
 
 -- create table: elec_config_mapping
 CREATE TABLE periodic.elec_config_mapping (
-  atomic_number_PK INTEGER ,
-  electron_configuration_id_FK INT REFERENCES electron_configuration ( id ) ,
-  core_charge  /* not sure about the data type for this field */ ) ;
+  atomic_number_PK INTEGER PRIMARY KEY,
+  electron_configuration_id_FK INTEGER
+    REFERENCES electron_configuration ( id ) ;
+
 
 -- create table: atomic_properties
 CREATE TABLE periodic.atomic_properties (
@@ -66,7 +79,21 @@ CREATE TABLE periodic.atomic_properties (
     REFERENCES elec_config_mapping( electron_configuration_id_FK ) ) ;
 
 -- create table: categories
-[insert ddl statement here]
+CREATE TABLE periodic.categories (
+  category_id_PK INTEGER PRIMARY KEY ,
+  category TEXT ) ;
 
 -- create table: element_category
-[insert ddl statement here]
+CREATE TABLE periodic.element_category (
+  atomic_number_PK INTEGER PRIMARY KEY,
+  category TEXT,
+  category_id_FK INTEGER
+    REFERENCES categories( category_id_PK ) );
+
+-- create table: block
+CREATE TABLE periodic.block (
+  atomic_number_PK INTEGER PRIMARY KEY,
+  block_id INTEGER ,
+  block_name VARCHAR(1),
+  category_id_FK INTEGER
+    REFERENCES categories( category_id_PK ) ) ;
