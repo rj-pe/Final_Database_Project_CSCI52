@@ -51,7 +51,7 @@ values ommitted for the sake of clarity in evaluation of ddl
 CREATE TABLE periodic.main (
   atomic_number_PK INTEGER PRIMARY KEY,
   element_name VARCHAR(20),
-  Symbol VARCHAR(3),
+  symbol VARCHAR(3),
   period_row INTEGER,
   group_column_FK INTEGER ) ;
 --insert data: main
@@ -66,8 +66,15 @@ values ommitted for the sake of clarity in evaluation of ddl
 
 --**--
 --create table: period
---[insert ddl statement here]
---insert data: period
+
+CREATE TABLE periodic.period(
+  atomic_number_PK INT ,
+  periodic_table_row_num_PK INT ,
+  number_electron_shells INT,
+  PRIMARY KEY( atomic_number_PK, periodic_table_row_num_PK ) ) ;
+  --insert data: period
+  INSERT INTO periodic.period VALUES
+
 
 --**--
 --create table: electron_configuration
