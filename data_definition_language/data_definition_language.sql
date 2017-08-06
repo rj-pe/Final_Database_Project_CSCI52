@@ -1,21 +1,26 @@
--- drop all previous instances of the db tables and views
-DROP TABLE physical_properties CASCADE ;
-DROP TABLE natural_occurrence CASCADE ;
-DROP TABLE main CASCADE ;
-DROP TABLE element_group CASCADE ;
-DROP TABLE period CASCADE ;
-DROP TABLE electron_configuration CASCADE ;
-DROP TABLE elec_config_mapping CASCADE ;
-DROP TABLE atomic_properties CASCADE ;
-DROP TABLE categories CASCADE ;
-DROP TABLE element_category CASCADE ;
-DROP TABLE block CASCADE ;
-DROP SEQUENCE electron_configuration_id_seq CASCADE ;
-/* PLEASE ADD TO THIS SECTION A DROP STATEMENT FOR NEW VIEWS  */
+--**--
+--drop all previous instances of the db tables and views
+DROP SCHEMA periodic CASCADE ;
+/*
+DROP TABLE periodic.physical_properties CASCADE ;
+DROP TABLE periodic.natural_occurrence CASCADE ;
+DROP TABLE periodic.main CASCADE ;
+DROP TABLE periodic.element_group CASCADE ;
+DROP TABLE periodic.period CASCADE ;
+DROP TABLE periodic.electron_configuration CASCADE ;
+DROP TABLE periodic.elec_config_mapping CASCADE ;
+DROP TABLE periodic.atomic_properties CASCADE ;
+DROP TABLE periodic.categories CASCADE ;
+DROP TABLE periodic.element_category CASCADE ;
+DROP TABLE periodic.block CASCADE ;
+DROP SEQUENCE periodic.electron_configuration_id_seq CASCADE ;
+uncomment this section only if schema object is not implemented in the build   */
 
--- create a schema so that we can apply data_contol_language statements globally
+--create a schema so that we can apply data_contol_language statements globally
 CREATE SCHEMA periodic ;
--- create table: physical_properties
+
+--**--
+--create table: physical_properties
 CREATE TABLE periodic.physical_properties (
     atomic_number_PK INTEGER PRIMARY KEY,
     melting_point NUMERIC ,
@@ -32,38 +37,62 @@ CREATE TABLE periodic.physical_properties (
     speed_of_sound NUMERIC ,
     thermal_conductivity NUMERIC ,
     thermal_expansion NUMERIC ) ;
+--insert data physical_properties
+/*INSERT INTO periodic.physical_properties VALUES
+values ommitted for the sake of clarity in evaluation of ddl
+*/
+--**--
+--create table: natural_occurrence
+--[insert ddl statement here]
+--insert data: natural_occurrence
 
--- create table: natural_occurrence
-[insert ddl statement here]
-
--- create table: main
+--**--
+--create table: main
 CREATE TABLE periodic.main (
   atomic_number_PK INTEGER PRIMARY KEY,
   element_name VARCHAR(20),
   Symbol VARCHAR(3),
   period_row INTEGER,
   group_column_FK INTEGER ) ;
+--insert data: main
+/* INSERT INTO periodic.main VALUES
+values ommitted for the sake of clarity in evaluation of ddl
+*/
 
--- create table: element_group
-[insert ddl statement here]
+--**--
+--create table: element_group
+--[insert ddl statement here]
+--insert data:element_group
 
--- create table: period
-[insert ddl statement here]
+--**--
+--create table: period
+--[insert ddl statement here]
+--insert data: period
 
--- create table: electron_configuration
+--**--
+--create table: electron_configuration
 CREATE TABLE periodic.electron_configuration (
   id SERIAL PRIMARY KEY ,
   electron_configuration TEXT ) ;
-ALTER SEQUENCE electron_configuration_id_seq RESTART WITH 1001 ;
+ALTER SEQUENCE periodic.electron_configuration_id_seq RESTART WITH 1001 ;
+--insert data: electron_configuration
+/* INSERT INTO periodic.electron_configuration(electron_configuration) VALUES
+values ommitted for the sake of clarity in evaluation of ddl
+*/
 
--- create table: elec_config_mapping
+--**--
+--create table: elec_config_mapping
 CREATE TABLE periodic.elec_config_mapping (
   atomic_number_PK INTEGER PRIMARY KEY,
   electron_configuration_id_FK INTEGER
-    REFERENCES electron_configuration ( id ) ;
+    REFERENCES periodic.electron_configuration ( id ) ) ;
+--insert data: elec_config_mapping
+/* INSERT INTO periodic.elec_config_mapping VALUES
+values ommitted for the sake of clarity in evaluation of ddl
+*/
 
-
--- create table: atomic_properties
+--**--
+--create table: atomic_properties
 CREATE TABLE periodic.atomic_properties (
   atomic_number_PK INTEGER PRIMARY KEY ,
   standard_atomic_weight NUMERIC ,
@@ -76,24 +105,44 @@ CREATE TABLE periodic.atomic_properties (
   covalent_radius NUMERIC ,
   van_der_waals_radius NUMERIC ,
   electron_configuration_id_FK INTEGER
-    REFERENCES elec_config_mapping( electron_configuration_id_FK ) ) ;
+    REFERENCES periodic.electron_configuration ( id ) ) ;
+--insert data: atomic_properties
+/* INSERT INTO periodic.atomic_properties VALUES
+values ommitted for the sake of clarity in evaluation of ddl
+*/
 
--- create table: categories
+--**--
+--create table: categories
 CREATE TABLE periodic.categories (
-  category_id_PK INTEGER PRIMARY KEY ,
-  category TEXT ) ;
+  category TEXT ,
+  category_id_PK INTEGER PRIMARY KEY ) ;
+--insert data: categories
+/* INSERT INTO periodic.categories VALUES
+values omitted for the sake of clarity and evaluation
+*/
 
--- create table: element_category
+--**--
+--create table: element_category
 CREATE TABLE periodic.element_category (
   atomic_number_PK INTEGER PRIMARY KEY,
   category TEXT,
   category_id_FK INTEGER
-    REFERENCES categories( category_id_PK ) );
+    REFERENCES periodic.categories( category_id_PK ) );
+--insert data: element_category
+/* INSERT INTO periodic.element_category VALUES
+values ommitted for the sake of clarity in evaluation of ddl
+*/
 
+--**--
 -- create table: block
 CREATE TABLE periodic.block (
   atomic_number_PK INTEGER PRIMARY KEY,
-  block_id INTEGER ,
+  block_id VARCHAR(2) ,
   block_name VARCHAR(1),
   category_id_FK INTEGER
-    REFERENCES categories( category_id_PK ) ) ;
+    REFERENCES periodic.categories( category_id_PK ) ) ;
+
+-- insert data: block
+/* INSERT INTO periodic.block VALUES
+values ommitted for the sake of clarity in evaluation of ddl
+*/
