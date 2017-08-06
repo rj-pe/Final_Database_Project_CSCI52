@@ -57,14 +57,14 @@ atomic_properties, RJ MZ
 
 electron_configuration, RJ
 
+period, RJ
+
 #### tables that need building:
 table name ,  person responsible for data
 
 group
 
 natural occurence
-
-period
 
 
 ## data_control_language (this section complete RJ)
