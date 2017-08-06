@@ -32,7 +32,7 @@ each of the **large subheadings** represents a directory container for `SQL code
   data_definition_language.sql
   
 #### requirements to fulfill:
-  SQL Joins, Views, subqueries including nested subquery techniques (15 points)
+  SQL Joins, Views, subqueries including nested subquery techniques (15 points), RJ -- in progress
   
   Data elements design including gathering requirements (15 points)
   
