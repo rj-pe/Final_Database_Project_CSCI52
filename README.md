@@ -59,13 +59,12 @@ electron_configuration, RJ
 
 period, RJ
 
+natural occurence, RJ
+
 #### tables that need building:
 table name ,  person responsible for data
 
 group
-
-natural occurence
-
 
 ## data_control_language (this section complete RJ)
 
