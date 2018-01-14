@@ -1,0 +1,19 @@
+#fields:
+category TEXT ,
+category_id_PK INT ,
+
+
+
+
+#data:
+category	,	category_id_PK
+(	'Alkali Metal'	,	100	),
+(	'Alkaline Earth Metal'	,	101	),
+(	'Lanthanide'	,	102	),
+(	'Actinide'	,	103	),
+(	'Transition Metal'	,	104	),
+(	'Post-Transition Metal'	,	105	),
+(	'Noble Gas'	,	106	),
+(	'Nonmetal'	,	107	),
+(	'Halogen'	,	108	),
+(	'Metalloid'	,	109	);
